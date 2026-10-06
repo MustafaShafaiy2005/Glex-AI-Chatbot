@@ -84,7 +84,7 @@ function addAssistantMessage(message) {
     const messageRow = document.createElement("div");
     messageRow.className = "glex-ai-message-row glex-ai-assistant-row";
     messageRow.innerHTML = `
-        <img src="/static/assistant-avatar.png" alt="Glex" class="glex-ai-message-avatar">
+        <img src="static/assistant-avatar.png" alt="Glex" class="glex-ai-message-avatar">
         <div class="glex-ai-message-column">
             <div class="glex-ai-signature">Glex by Jeeyya <span>✦</span></div>
             <div class="glex-ai-bubble glex-ai-assistant-bubble">${formatMessage(message)}</div>
