@@ -312,7 +312,7 @@
     .menu-toggle{ display:block; }
   }
 </style>
-  <link rel="stylesheet" href="{{ url_for('static', filename='chat-widget.css') }}">
+  <link rel="stylesheet" href="static/chat-widget.css">
 </head>
 <body>
 
@@ -628,7 +628,7 @@
 <!-- Glex AI Chat Widget -->
 <div class="glex-ai-widget" id="glexAiWidget">
   <button class="glex-ai-toggle" id="glexAiToggle" type="button" aria-label="Open Glex AI chat" aria-expanded="false">
-    <img src="{{ url_for('static', filename='assistant-avatar.png') }}" alt="Glex AI">
+    <img src="static/assistant-avatar.png" alt="Glex AI">
     <span class="glex-ai-toggle-text">Glex AI</span>
     <span class="glex-ai-toggle-dot" aria-hidden="true"></span>
   </button>
@@ -636,7 +636,7 @@
   <section class="glex-ai-panel" id="glexAiPanel" aria-hidden="true" aria-label="Glex AI chat">
     <div class="glex-ai-header">
       <div class="glex-ai-header-left">
-        <img class="glex-ai-avatar" src="{{ url_for('static', filename='assistant-avatar.png') }}" alt="Glex AI">
+        <img class="glex-ai-avatar" src="static/assistant-avatar.png" alt="Glex AI">
         <div>
           <div class="glex-ai-title">Glex AI <span>✦</span></div>
           <div class="glex-ai-status">Here to help with your nail set</div>
@@ -647,7 +647,7 @@
 
     <div class="glex-ai-chat-box" id="chat-box">
       <div class="glex-ai-message-row glex-ai-assistant-row">
-        <img src="{{ url_for('static', filename='assistant-avatar.png') }}" alt="Glex" class="glex-ai-message-avatar">
+        <img src="static/assistant-avatar.png" alt="Glex" class="glex-ai-message-avatar">
         <div class="glex-ai-message-column">
           <div class="glex-ai-signature">Glex by Jeeyya <span>✦</span></div>
           <div class="glex-ai-bubble glex-ai-assistant-bubble">
@@ -678,7 +678,7 @@
   });
 </script>
 
-<script src="{{ url_for('static', filename='chat.js') }}"></script>
+<script src="static/chat.js"></script>
 
 </body>
 </html>
