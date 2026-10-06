@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glex by Jeeyya | AI Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Decorative background -->
+    <div class="background-decoration decoration-one"></div>
+    <div class="background-decoration decoration-two"></div>
+    <div class="background-sparkle sparkle-one">✦</div>
+    <div class="background-sparkle sparkle-two">✧</div>
+    <div class="background-sparkle sparkle-three">✦</div>
+
+
+    <!-- Main Chat Window -->
+    <main class="chat-container">
+
+
+        <!-- =========================
+             CHAT HEADER
+             ========================= -->
+
+        <header class="chat-header">
+
+            <div class="profile-section">
+
+                <div class="profile-image-wrapper">
+
+                    <img
+                        src="{{ url_for('static', filename='assistant-avatar.png') }}"
+                        alt="Glex AI Assistant"
+                        class="profile-image"
+                    >
+
+                    <span class="online-dot"></span>
+
+                </div>
+
+
+                <div class="profile-details">
+
+                    <h1>Glex by Jeeyya</h1>
+
+                    <div class="profile-status">
+                        <span class="status-dot"></span>
+                        <span>Online</span>
+                    </div>
+
+                    <p>AI Beauty Assistant</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-decoration">
+                ✦
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             CHAT AREA
+             ========================= -->
+
+        <section id="chat-box" class="chat-box">
+
+
+            <!-- Initial Assistant Message -->
+
+            <div class="message-row assistant-row">
+
+                <img
+                    src="{{ url_for('static', filename='assistant-avatar.png') }}"
+                    alt="Glex"
+                    class="message-avatar"
+                >
+
+                <div class="message-column">
+
+                    <div class="message-signature">
+                        Glex by Jeeyya
+                        <span>✦</span>
+                    </div>
+
+                    <div class="message-bubble assistant-bubble">
+
+                        Hi! I'm Glex, your AI beauty assistant.
+                        How can I help you today? 💅
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             TYPING INDICATOR
+             ========================= -->
+
+        <div id="typing-indicator" class="typing-indicator hidden">
+
+            <img
+                src="{{ url_for('static', filename='assistant-avatar.png') }}"
+                alt="Glex"
+                class="typing-avatar"
+            >
+
+            <div class="typing-content">
+
+                <div class="typing-name">
+                    Glex by Jeeyya
+                </div>
+
+                <div class="typing-bubble">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <label>Glex is typing...</label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             INPUT AREA
+             ========================= -->
+
+        <div class="chat-input-area">
+
+            <div class="input-wrapper">
+
+                <span class="input-icon">♡</span>
+
+                <input
+                    type="text"
+                    id="message"
+                    placeholder="Ask Glex anything..."
+                    autocomplete="off"
+                >
+
+                <button
+                    onclick="sendMessage()"
+                    class="send-button"
+                    aria-label="Send message"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             FOOTER
+             ========================= -->
+
+        <footer class="chat-footer">
+
+            <span>✦</span>
+
+            Glex by Jeeyya
+
+            <span>·</span>
+
+            AI Customer Assistant
+
+            <span>✦</span>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+</body>
+
+</html>
