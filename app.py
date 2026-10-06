@@ -1,11 +1,17 @@
+```python
 import os
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv()
 
 app = Flask(__name__)
+
+# Allow the GitHub Pages website to communicate with this Flask backend
+CORS(app, origins=["https://mustafashafaiy2005.github.io"])
+
 client = OpenAI()
 
 glex_instructions = """
@@ -62,3 +68,4 @@ def chat():
 
 if __name__ == "__main__":
     app.run(debug=True)
+```
